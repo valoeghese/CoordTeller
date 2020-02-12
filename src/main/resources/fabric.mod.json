@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "coordteller",
+  "version": "1.0.0",
+  "name": "Coordinate Teller",
+  "description": "For minigames and stuff. Should work as a server side mod.",
+  "authors": [
+    "Valoeghese"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+       "tk.valoeghese.coordteller.CoordTeller"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.4.0"
+  }
+}
