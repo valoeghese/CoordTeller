@@ -1,4 +1,4 @@
-For a minigame. privately distributed but you can compile it yourself
+For a minigame.
 
 ### How to compile to a jar
 - download this repo and run
