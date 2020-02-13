@@ -27,7 +27,7 @@ public class CoordTeller implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		// get config file
-		File configFile = new File(FabricLoader.getInstance().getConfigDirectory().getPath() + "/coordteller.cfg");
+		File configFile = new File(FabricLoader.getInstance().getConfigDirectory().getPath() + "/coordteller.zfg");
 
 		// If config file does not exist we created and mark that we need to write to it
 		boolean write = false;
