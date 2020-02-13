@@ -115,7 +115,7 @@ public class CoordTeller implements ModInitializer {
 			// check if the time is correct for another telling
 			long currentTime = System.currentTimeMillis();
 			if (currentTime > nextTimeElapsed) {
-				nextTimeElapsed = currentTime - (long) minTimeBetweenTellings + (long) RAND.nextInt(deltaTimeBetweenTellings);
+				nextTimeElapsed = currentTime + (long) minTimeBetweenTellings + (long) RAND.nextInt(deltaTimeBetweenTellings);
 
 				// get player source and do stuff
 				PlayerManager playerManager = server.getPlayerManager();
