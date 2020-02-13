@@ -1,4 +1,4 @@
-For a minigame. privately distributed but you can compile it yourself
+For a minigame.
 
 ### How to compile to a jar
 **EDIT: as of right now, loom  has a bug which prevents files() from working with modImplementation, meaning this cannot be compiled as easily**
