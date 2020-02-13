@@ -125,11 +125,15 @@ public class CoordTeller implements ModInitializer {
 
 				for (String reader : coordinateReaders) {
 					ServerPlayerEntity readerPlayer = getPlayer.apply(reader);
+					if (readerPlayer == null) {
+						continue;
+					}
 
 					// Select targets
 					if (targets == null || pickTargetsPerReader) {
 						targets = new HashSet<>();
 						int deltaTargetCount = maxTargetCountToUse - minTargetCount;
+						deltaTargetCount = deltaTargetCount < 1 ? 1 : deltaTargetCount;
 						int targetCount = RAND.nextInt(deltaTargetCount) + minTargetCount;
 
 						for (int i = 0; i < targetCount; ++i ) {
@@ -168,7 +172,10 @@ public class CoordTeller implements ModInitializer {
 					// Give target coordinates to reader, with inaccuracies
 					targets.forEach(targetString -> {
 						ServerPlayerEntity target = getPlayer.apply(targetString);
-						
+						if (target == null) {
+							return;
+						}
+
 						Vec3d coordsForDisplay = pickTargetsPerReader ?
 							getCoordsForDisplay(target) :
 							coordinateCache.computeIfAbsent(target, CoordTeller::getCoordsForDisplay);
